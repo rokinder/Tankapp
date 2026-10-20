@@ -14,6 +14,11 @@ jobs:
         with:
           flutter-version: '3.19.6'
           channel: 'stable'
+      - name: Run deep clean
+        run: |
+          flutter clean
+          rm -rf android/.gradle
+          rm -rf android/app/build
 
       - name: Run flutter clean
         run: flutter clean
